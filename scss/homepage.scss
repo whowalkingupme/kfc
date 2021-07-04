@@ -1,0 +1,282 @@
+@font-face {
+  font-family: Microsoft;
+  src: url("../font/fa-regular-400.ttf");
+}
+
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background-color: #faf6f3;
+  font-family: "Microsoft JhengHei", Arial;
+  color: #2d2926;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2926;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  margin: 20px 0 10px 0 !important;
+  font-weight: bold;
+}
+
+.mt-20 {
+  margin-bottom: 20px;
+}
+
+.mt-70 {
+  margin-bottom: 70px;
+}
+
+.top-header {
+  height: 70px;
+  border-color: #faf6f3;
+
+  > div {
+    display: inline-block;
+  }
+
+  .logo img {
+    &.desktop {
+      height: 55px;
+      padding-left: 20px;
+      padding-top: 10px;
+      box-sizing: content-box !important;
+    }
+
+    &.mobile {
+      display: none;
+    }
+  }
+
+  .login {
+    padding: 25px 0 0 0;
+    position: absolute;
+    text-align: right;
+    width: 90%;
+
+    a {
+      font-weight: bold;
+
+      &:hover {
+        color: #e4002b;
+      }
+    }
+  }
+}
+
+.content {
+  padding: 1% 3%;
+}
+
+.mainMenu {
+  background-color: #fff;
+  padding: 0 2% 0 2%;
+  height: 50px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-flex;
+      font-weight: bold;
+
+      a {
+        padding: 14px 10px;
+
+        &:hover {
+          color: #fff;
+          background-color: #e4002b;
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+
+      img {
+        height: 22px;
+      }
+
+      &.coupon-icon {
+        position: absolute;
+
+        a {
+          padding-bottom: 10px;
+
+          &:hover {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 1024px;
+  background: url("../image/bg_0728.jpg") repeat;
+}
+
+.bucket {
+  position: absolute;
+  margin: 10px 0 20px 0;
+  right: 20px;
+  top: 70px;
+  font-weight: bold;
+
+  > div {
+    display: inline-block;
+  }
+
+  .bucket_quantity {
+    background-image: url("../image/empty-bucket_NewIndex.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 32px;
+    padding: 9px 0 0 10px;
+  }
+
+  .total_price {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+}
+
+.topBtn {
+  text-align: center;
+  margin-top: 10px;
+
+  div {
+    display: inline-block;
+    margin: 5px 0;
+    text-align: center;
+    box-sizing: content-box;
+  }
+}
+
+.startOrder_0609,
+.nontouch_0609 {
+  width: 36%;
+  padding: 0 1%;
+}
+
+.groupBuy_0609 {
+  width: 18%;
+  padding: 0 1%;
+}
+
+.carousel-control-prev img {
+  padding-right: 63px;
+}
+
+.carousel-control-next img {
+  padding-left: 63px;
+}
+
+.hot_prd {
+  border: 1px solid #e4002b;
+  border-radius: 5px;
+  background-color: #fff;
+
+  .prd_name {
+    padding: 0 10px;
+    height: 45px;
+    line-height: 21px;
+    white-space: normal;
+    color: #e4002b;
+    margin: 10px 0 5px 0;
+  }
+
+  .prdimg img{
+      margin: 4%;
+      width: 92% !important;
+  }
+}
+
+.carousel-control-prev img:before {
+  content: "";
+}
+
+.prd_price {
+  padding: 0 10px;
+  font-size: 1.4em;
+  margin: 0 0 3px 0; 
+}
+
+.prd_btn {
+  background-color: #e4002b;
+  text-align: center;
+  width: 92%;
+  margin: 0 4% 10px 4%;
+  border-radius: 3px;
+  padding: 5px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 1px #a3011f;
+  a {
+    color: #fff;
+  }
+}
+
+/*餐點*/
+
+.meals div {
+  display: inline-block;
+  padding: 0;
+}
+
+.meal_prd {
+  width: 23%;
+  border-radius: 6px;
+  margin: 0 6px 6px 6px;
+
+  .prdimg img {
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 0;
+    width: 100%;
+    vertical-align: bottom;
+  }
+
+  .meal_ped_name {
+    background-color: #e4002b;
+    color: #fff;
+    border-radius: 0 0 5px 0;
+    text-align: center;
+  }
+}
+
+.copyright {
+  text-align: center;
+}
+
+/*0609新增三顆按鈕+熱銷排行*/
+
+.hotTop {
+  width: 36px;
+  height: auto;
+  position: absolute;
+  padding-left: 10px;
+  top: 27%;
+  box-sizing: content-box !important;
+}
+
+.slider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #faf6f3 !important;
+  margin-top: 120px;
+}

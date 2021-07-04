@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上訂餐 | 外送與預訂快取 | 肯德基KFC</title>
+    <meta name="description" content="肯德基線上訂餐超方便！預訂快取免排隊，獨家外送優惠搶購中！想吃炸雞、漢堡、蛋撻通通有，個人獨享或家庭聚餐就選肯德基！">
+    <meta name="keywords"
+        content="(Branding) 肯德基,KFC,(Product) 炸雞,烤雞,漢堡, 外帶全家餐,任你選全家餐, 桶餐，咔啦雞腿堡,肯德基蛋塔,肯德基蛋撻(外送) 炸雞外送,烤雞外送, 肯德基訂餐,肯德基外送,order,kfcorder,4128000,肯德基現食專送,肯德基網路訂餐,肯德基網路點餐,肯德基手機點餐,肯德基網路訂購,肯德基預訂,肯德基預購,肯德基會員,(外帶) 預訂快取,預約外帶,預定快取,預訂自取,外帶自取">
+
+
+    <link rel="shortcut icon" href="https://www.kfcclub.com.tw/kfcicon_new.ico">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./css/new_index.css">
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="js/jquery.js"></script>
+
+    <style>
+        .async-hide {
+            opacity: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hdNewIndex">
+        <div class="top-header">
+            <!--HambuegerMENU-->
+            <div>
+                <nav>
+
+                </nav>
+            </div>
+
+            <div class="logo">
+                <a href="#">
+                    <img src="./picture/logo-PC-new.png" class="desktop" alt="KFC">
+                    <img src="./picture/logo-mobile-new.png" class="mobile" alt="KFC">
+                </a>
+            </div>
+            <div class="text-links login" id="LoginDiv">
+                <a id="aLogin" class="auth-link" href="javascript:;">登入</a>
+            </div>
+        </div>
+        <div class="mainMenu">
+            <ul>
+                <li>
+                    <a href="#menu_1">個人餐</a>
+                </li>
+                <li>
+                    <a href="#menu_2">多人餐</a>
+                </li>
+                <li>
+                    <a href="#menu_3">早餐</a>
+                </li>
+                <li>
+                    <a href="#menu_4">單點</a>
+                </li>
+                <li>
+                    <a href="#menu_5">熱門餐點</a>
+                </li>
+                <li class="coupon-icon">
+                    <a href="#">
+                        <img src="./picture/coupon-icon.svg" alt="優惠券" title="優惠券">
+                    </a>
+                </li>
+            </ul>
+
+            <!--電腦版桶子-->
+            <a href="#">
+                <div class="bucket">
+                    <div id="divFTotalNumber" class="bucket_quantity">0</div>
+                    <div class="total_price">$<span id="divFTotalPrice">0</span></div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <section class="slider">
+        <div id="carouselMenuControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="javasript:;">
+                        <img src="./picture/BN_加1元多1件-210625.jpg" class="d-block w-100">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="javasript:;">
+                        <img src="./picture/BN-350免運-210625.jpg" class="d-block w-100">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="javasript:;">
+                        <img src="./picture/BN-椒香麻辣脆雞-XL-210618.jpg" class="d-block w-100">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="javasript:;">
+                        <img src="./picture/BN-冰淇淋大福-210623.jpg" class="d-block w-100">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMenuControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMenuControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="content mt-20">
+        <div class="topBtn">
+            <div class="startOrder_0609" id="btnOrderStart">
+                <a href="javascript:;">
+                    <img src="./picture/btn_startOrder-phone(0621).svg" alt="">
+                </a>
+            </div>
+            <div class="nontouch_0609" id="btnOrderStart">
+                <a href="javascript:;">
+                    <img src="./picture/btn_nontouch-phone(0621).svg" alt="">
+                </a>
+            </div>
+            <div class="groupBuy_0609" id="btnGroupBuyStart">
+                <a href="javascript:;">
+                    <img src="./picture/btn_groupBuy-phone(0621).svg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <h2 class="fs-5">人氣排行</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="carouselMenuIndicators2" class="carousel slide" data-bs-touch="false"
+                        data-bs-interval="false">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMenuIndicators2"
+                            data-bs-slide="prev">
+                            <img src="./image/left-arrow_r_NewIndex.png">
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMenuIndicators2"
+                            data-bs-slide="next">
+                            <img src="./image/right-arrow_r_NewIndex.png">
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd .hot_prd_1">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top1_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/椒香麻辣脆雞XL餐-210429.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">椒香麻辣脆雞XL套餐</p>
+                                                <p class="prd_price">$189</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top2_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/歡聚炸雞餐-210621.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">宅宅快樂餐</p>
+                                                <p class="prd_price">$499</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top3_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/咔啦雞腿堡XL餐-210429.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">咔啦雞腿堡XL套餐</p>
+                                                <p class="prd_price">$179</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top4_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/花生熔岩咔啦雞腿堡XL餐-210429.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">花生熔岩咔啦雞腿堡XL餐</p>
+                                                <p class="prd_price">$189</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top5_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/吮指雙雞XL餐-210429.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">吮指雙雞XL餐</p>
+                                                <p class="prd_price">$179</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top6_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/義式香草紙包雞XL餐-210429.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">義式香草紙包雞XL餐</p>
+                                                <p class="prd_price">$179</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top7_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/狂饗桶餐-210608.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">狂饗桶</p>
+                                                <p class="prd_price">$279</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top8_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/咔啦雞腿堡個人餐-210608.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">咔啦雞腿堡套餐</p>
+                                                <p class="prd_price">$129</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top9_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/卡菲嫩雞捲個人餐-210608.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">巴黎卡菲嫩雞捲套餐</p>
+                                                <p class="prd_price">$99</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 px-0 mx-6">
+                                        <div class="card hot_prd">
+                                            <div class="hotTop">
+                                                <img class="img-fluid" src="./picture/top10_NewIndex.png">
+                                            </div>
+                                            <div class="prdimg">
+                                                <img class="img-fluid" src="./picture/香草紙包雞個人餐-210608.jpg">
+                                            </div>
+                                            <div class="card-body px-0 py-0">
+                                                <p class="prd_name">義式香草紙包雞套餐</p>
+                                                <p class="prd_price">$149</p>
+                                                <div class="prd_btn">
+                                                    <a href="javascript:;">我要訂購</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="menu_1" class="fs-5">個人餐</h2>
+
+        <div class="meals">
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/咔啦雞腿堡XL餐-210429.jpg">
+                    </div>
+                    <p class="meal_ped_name">重量級XL套餐</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/Menu-個人餐-咔啦雞腿堡套餐-210608-1.jpg">
+                    </div>
+                    <p class="meal_ped_name">個人獨享餐</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/卡菲嫩雞捲個人餐-210608.jpg">
+                    </div>
+                    <p class="meal_ped_name">99雞勵套餐</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/Menu-上校私廚烤雞腿溫沙拉套餐-201130.jpg">
+                    </div>
+                    <p class="meal_ped_name">上校私廚沙拉</p>
+                </a>
+            </div>
+
+        </div>
+
+        <h2 id="menu_2" class="fs-5">多人餐</h2>
+
+        <div class="meals">
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/Menu-2-4人歡聚炸雞餐-210608.jpg">
+                    </div>
+                    <p class="meal_ped_name">2-4人歡聚餐</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/Menu-5-7人派對B餐-10塊雞-210608.jpg">
+                    </div>
+                    <p class="meal_ped_name">5-7人歡聚餐</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/Menu-8人以上好食雞同樂餐-210608.jpg">
+                    </div>
+                    <p class="meal_ped_name">8人以上歡聚餐</p>
+                </a>
+            </div>
+
+        </div>
+
+        <h2 id="menu_3" class="fs-5">早餐</h2>
+
+        <div class="meals">
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/總匯歐姆蛋堡套餐.jpg">
+                    </div>
+                    <p class="meal_ped_name">早餐套餐</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/總匯歐姆蛋燒餅.jpg">
+                    </div>
+                    <p class="meal_ped_name">早餐單點</p>
+                </a>
+            </div>
+
+        </div>
+
+        <h2 id="menu_4" class="fs-5">單點</h2>
+
+        <div class="meals">
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/OOS產品圖_雞胸(2).jpg">
+                    </div>
+                    <p class="meal_ped_name">單點主餐</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/原味蛋撻禮盒.jpg">
+                    </div>
+                    <p class="meal_ped_name">蛋撻</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/經典拼盤.jpg">
+                    </div>
+                    <p class="meal_ped_name">附餐/點心</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/Menu-飲料-百事可樂(中)-210608.jpg">
+                    </div>
+                    <p class="meal_ped_name">飲料/湯品</p>
+                </a>
+            </div>
+
+        </div>
+
+        <h2 id="menu_5" class="fs-5">熱門餐點</h2>
+
+        <div class="meals">
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/Menu-最新促銷-超人氣同樂餐-210608.jpg">
+                    </div>
+                    <p class="meal_ped_name">最新促銷</p>
+                </a>
+            </div>
+            <div class="meal_prd">
+                <a href="#">
+                    <div class="prdimg">
+                        <img src="./picture/咔啦雞腿堡XL餐-210429.jpg">
+                    </div>
+                    <p class="meal_ped_name">熱門菜單</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="height: 120px;"></div>
+
+    <div class="copyright">
+        <p>©KFC TAIWAN</p>
+        <img src="./picture/stripes.png">
+    </div>
+
+</body>
+
+</html>
